@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic App Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- App Theme Meta -->
+    <link rel="icon" href="/assets/static/favicon.ico" />
+
+    <!-- App SEO Meta -->
+    <title>React Vue SSG</title>
+    <meta name="description" content="React Vue SSG" data-react-helmet="true" />
+    
+    <% if (htmlWebpackPlugin.tags.headTags.length > 0) { %>
+    <!-- Start: Tags Generated at Build Step -->
+    <%= htmlWebpackPlugin.tags.headTags.join('\n    ') %>
+    <!-- End: Tags Generated at Build Step -->
+    <% } %>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <% if (htmlWebpackPlugin.tags.bodyTags.length > 0) { %>
+    <!-- Start: Tags Generated at Build Step -->
+    <%= htmlWebpackPlugin.tags.bodyTags.join('\n    ') %>
+    <!-- End: Tags Generated at Build Step -->
+    <% } %>
+  </body>
+</html>
